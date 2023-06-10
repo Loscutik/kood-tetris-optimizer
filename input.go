@@ -116,33 +116,6 @@ func isValid(t tetromino, char rune) bool {
 		return true
 	}
 	return false
-
-	// for i := 0; i < SizeOfTetromino; i++ {
-	// 	nextRowConnection := false // next row block connection
-	// 	for j := 0; j < SizeOfTetromino; j++ {
-	// 		if t[i][j] == char { // If we find tetromino body
-	// 			nodes++ // Add block count
-	// 			if (i > 0 && t[i-1][j] == char) || (i < 3 && t[i+1][j] == char) ||
-	// 				(j > 0 && t[i][j-1] == char) || (j < 3 && t[i][j+1] == char) { // If there is a block near current block
-	// 				if nodes == 3 { // If there's 3 blocks already
-	// 					t[i][j] = '.' // Make tetromino current coordinates empty
-	// 				}
-	// 				if i < 3 && t[i+1][j] == char { // If there's a block ahead in the next row, mark it
-	// 					nextRowConnection = true
-	// 				}
-	// 				connections++
-	// 			}
-	// 		}
-	// 	}
-	// 	if nodes > 0 && nodes < SizeOfTetromino && !nextRowConnection { // If body isn't finished and there's no blocks ahead, return false
-	// 		return false
-	// 	}
-	// 	t[i] = [SizeOfTetromino]rune{}
-	// }
-	// if nodes == SizeOfTetromino && connections == 3 { // If tetromino conditions met, return true
-	// 	return true
-	// }
-	// return false
 }
 
 func (t *tetromino) shiftUp() {
